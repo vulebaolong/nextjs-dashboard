@@ -9,6 +9,7 @@ interface IFormData {
     amount?: number;
     status?: string;
 }
+
 export async function createInvoice(formData: IFormData) {
     if (formData.amount === 0 || !formData.amount) return console.log("Vui lòng nhập amount");
     if (formData.customerId === "") return console.log("Vui lòng nhập customerId");
